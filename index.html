@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <title>MAESTRO MASTER DANIEL - Alpha Elite 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maestro-green: #00a884;
+            --maestro-bg: #010413;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--maestro-bg);
+            color: #f8fafc;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(0, 168, 132, 0.2); border-radius: 20px; }
+
+        .text-glow { text-shadow: 0 0 15px rgba(0, 168, 132, 0.6); }
+        .box-glow { box-shadow: 0 0 30px rgba(0, 168, 132, 0.2); }
+        .box-glow-strong { box-shadow: 0 0 50px rgba(0, 168, 132, 0.4); }
+
+        .scanlines::after {
+          content: " ";
+          display: block;
+          position: fixed;
+          top: 0; left: 0; bottom: 0; right: 0;
+          background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+          z-index: 1000;
+          background-size: 100% 2px, 3px 100%;
+          pointer-events: none;
+        }
+
+        @keyframes signal-flow {
+          0% { height: 10%; }
+          50% { height: 70%; }
+          100% { height: 10%; }
+        }
+        .signal-bar { animation: signal-flow 1.5s ease-in-out infinite; }
+
+        /* Animation for pulse effect */
+        @keyframes pulse-ring {
+          0% { transform: scale(.33); }
+          80%, 100% { opacity: 0; }
+        }
+
+        .mic-active-ring {
+          position: relative;
+        }
+        .mic-active-ring::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: var(--maestro-green);
+          animation: pulse-ring 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+          z-index: -1;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.45.0",
+    "framer-motion": "https://esm.sh/framer-motion@^11.0.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="scanlines">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
