@@ -1,0 +1,8 @@
+{
+  "name": "MAESTRO MASTER DANIEL - Alpha Elite 2026",
+  "description": "Orquestrador profissional com Sistema Estude Alpha, integração OpenClaw, interface adaptativa de voz e texto, evolução autônoma e telemetria de marketing.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
